@@ -1,3 +1,4 @@
+package problem1;
 public class Multiples {
 	
 	private int div1 = 3;
