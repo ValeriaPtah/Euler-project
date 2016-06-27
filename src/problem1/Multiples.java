@@ -13,7 +13,7 @@ public class Multiples {
 		this.div1 = div1;
 		this.div2 = div2;
 	}
-	
+	//InelliJ test
 	//finds a sum of all numbers in n divided by div
 	public int arSum (int n, int div) {
 		int sum = 0; //returned sum
