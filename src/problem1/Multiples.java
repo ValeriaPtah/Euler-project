@@ -18,7 +18,7 @@ public class Multiples {
 	public int arSum (int n, int div) {
 		int sum = 0; //returned sum
 		int firstMem = div;
-		int amount = n/div; //number of members
+		int amount = (n-1)/div; //number of members
 		
 		sum = (2*firstMem + div*(amount-1))*((amount/2)+(amount%2));
 		
@@ -38,7 +38,7 @@ public class Multiples {
 		for (int i=0; i<n; i++) {
 			if ((i%div1==0) || (i%div2==0)) {
 				sum=sum+i;
-				System.out.println(i);
+			//	System.out.println(i);
 			}
 		}
 		//brute-force sum
