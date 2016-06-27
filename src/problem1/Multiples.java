@@ -35,9 +35,11 @@ public class Multiples {
 	
 	public int testSum (int div1, int div2, int n) {
 		int sum = 0;
-		for (int i=0; i<=n; i++) {
-			if ((i%div1==0) || (i%div1==0))
-				sum+=i;
+		for (int i=0; i<n; i++) {
+			if ((i%div1==0) || (i%div2==0)) {
+				sum=sum+i;
+				System.out.println(i);
+			}
 		}
 		//brute-force sum
 		return sum;
