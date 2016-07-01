@@ -7,6 +7,7 @@ package problem3;
 public class Problem3 {
     public static void main(String[] args) {
         int n = 13195; //issue with too large number
+        double y = 600851475143.0;
         LargestPrimeFactor euler3 = new LargestPrimeFactor();
 
         System.out.println(euler3.largestPrime(n));
