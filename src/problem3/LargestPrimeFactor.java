@@ -17,12 +17,15 @@ public class LargestPrimeFactor {
     //check if a number is prime
     private boolean isPrime (double n) {
         boolean check = false;
-        double nSqr = Math.sqrt(n);
-        for (int i = 2; i < nSqr; i++) {
-            if (n % i == 0)
+//        double nSqr = Math.sqrt(n);
+        for (int i = 2; i < n/2; i++) {
+            if (n % i == 0) {
                 check = false;
+                break;
+            }
             else check = true;
         }
+
 
         return check;
     }
@@ -32,12 +35,18 @@ public class LargestPrimeFactor {
         double nSqr = Math.sqrt(n);
 
         for (int i = 2; i < nSqr; i++) {
-            if (isPrime(i) && isPrime(n/i) && (n%i == 0)) {
-                factor = n/i;
+            System.out.println("I'm here! " + i + " \n"); //debug
+            double initDiv = n/i;
+            System.out.println(initDiv + "\n"); //debug
+            if (/*isPrime(i) && */isPrime(initDiv) && (n%i == 0)) {
+                factor = initDiv;
+                System.out.println(factor);
             }
         }
 
-
+        System.out.println("5 is prime: " + isPrime(5));
+        System.out.println("25 is prime: " + isPrime(25));
+        System.out.println("13 is prime: " + isPrime(13));
 
         return factor;
     }
