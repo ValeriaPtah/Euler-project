@@ -10,6 +10,6 @@ public class Problem3 {
         double y = 600851475143.0;
         LargestPrimeFactor euler3 = new LargestPrimeFactor();
 
-        System.out.println(euler3.largestPrime(n));
+        System.out.println("Final result: " + euler3.largestPrime(n));
     }
 }

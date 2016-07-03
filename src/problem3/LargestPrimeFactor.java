@@ -4,7 +4,7 @@ package problem3;
 public class LargestPrimeFactor {
 
     private double greatCommonDivider(double a, double b) {
-        double rem = 0;
+        double rem;
         while (b != 0) {
             rem = a%b;
             a = b;
@@ -17,15 +17,15 @@ public class LargestPrimeFactor {
     //check if a number is prime
     private boolean isPrime (double n) {
         boolean check = false;
-//        double nSqr = Math.sqrt(n);
-        for (int i = 2; i < n/2; i++) {
-            if (n % i == 0) {
+        int cutN = (int)n; //cutting *.[00] part
+//        System.out.println("cutN " + cutN); //debug
+        for (int i = 2; i <= cutN/2; i++) {
+            if (cutN % i == 0) {
                 check = false;
                 break;
             }
             else check = true;
         }
-
 
         return check;
     }
@@ -33,43 +33,26 @@ public class LargestPrimeFactor {
     public double largestPrime (double n) {
         double factor = 0.0;
         double nSqr = Math.sqrt(n);
+//        System.out.println("\nnSqr " + nSqr + "\n"); //debug
 
-        for (int i = 2; i < nSqr; i++) {
-            System.out.println("I'm here! " + i + " \n"); //debug
+        for (int i = 2; i <= nSqr; i++) {
             double initDiv = n/i;
-            System.out.println(initDiv + "\n"); //debug
-            if (/*isPrime(i) && */isPrime(initDiv) && (n%i == 0)) {
-                factor = initDiv;
-                System.out.println(factor);
+//            System.out.println("I'm here! i: " + i); //debug
+//            System.out.println("n/i: " + initDiv); //debug
+//            System.out.println("Prime? : " + isPrime(initDiv) + "\n"); //debug
+
+            if (isPrime(i) && (n%i == 0)) {
+//                System.out.println("I'm finally here... i: " + i); //debug
+                factor = i;
+//                System.out.println("factor: " + factor);
             }
         }
-
-        System.out.println("5 is prime: " + isPrime(5));
-        System.out.println("25 is prime: " + isPrime(25));
-        System.out.println("13 is prime: " + isPrime(13));
+//        ifPrime() check – works
+//        System.out.println("5 is prime: " + isPrime(5));
+//        System.out.println("25 is prime: " + isPrime(25));
+//        System.out.println("13 is prime: " + isPrime(13));
 
         return factor;
     }
 
-    //doesn't work
-    //Pollard's rho algorithm
-//    public double largestPrime (double n) {
-//        double primeFixed = 2; //x_fixed
-//        int cycleSize = 2;  //cycle_size
-//        double prime = 2;      //x
-//        double factor = 1;     //factor
-//
-//        while (factor == 1) {
-//            for (int count = 1; ((count <= cycleSize) /*&& (factor <= 1)*/); count++) {
-//                prime = (prime*prime + 1) % n;
-//                factor = greatCommonDivider(prime - primeFixed, n);
-//            }
-//
-//            cycleSize *= 2;
-//            primeFixed = prime;
-//            System.out.println(factor);
-//        }
-//
-//        return factor;
-//    }
 }
