@@ -6,10 +6,11 @@ package problem3;
 
 public class Problem3 {
     public static void main(String[] args) {
-        double n = 13195.0; //issue with too large number
+        double n = 8051.0; //issue with too large number
         double y = 600851475143.0;
         LargestPrimeFactor euler3 = new LargestPrimeFactor();
 
-        System.out.println("Final result: " + euler3.largestPrime(n));
+        System.out.println("Test result: " + euler3.largestPrime(n));
+        System.out.println("Final result: " + euler3.largestPrime(y));
     }
 }
