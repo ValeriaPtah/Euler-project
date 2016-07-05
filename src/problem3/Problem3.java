@@ -9,11 +9,11 @@ public class Problem3 {
         long n1 = 8051L;
         long n2 = 10403L;
         long y = 600851475143L;
+        
         LargestPrimeFactor euler3 = new LargestPrimeFactor();
 
         System.out.println("(should be 97) Test result: " + euler3.largestPrimeCheck(n1));
-//        System.out.println("(should be 103) Test result: " + euler3.largestPrimeCheck(n2));
-//        System.out.println("Final result: " + euler3.largestPrime(y));
-//        System.out.println("Final check: " + euler3.largestPrimeCheck(y));
+        System.out.println("(should be 103) Test result: " + euler3.largestPrimeCheck(n2));
+        System.out.println("Final result: " + euler3.largestPrimeCheck(y));
     }
 }
