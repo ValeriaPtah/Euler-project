@@ -50,4 +50,20 @@ public class LargestPrimeFactor {
         } else return nLoc;
     }
 
+
+    //initial method – for small numbers uses n/2, but for large sqr(n)
+    //slow, not always precise
+//   public double largestPrime (double n) {
+//        double factor = 0.0;
+//        double nHalf = n/2; //precise limit
+//        double nSqr = Math.sqrt(n); //local limit
+//
+//        for (int i = 2; i < nSqr; i++) {
+//            if (isPrime(i) && (n%i == 0))
+//                factor = i;
+//        }
+//
+//        return factor;
+//    }
+
 }
