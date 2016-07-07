@@ -7,8 +7,8 @@ public class Problem4 {
     public static void main(String[] args) {
 
         PalindromeTriple euler4 = new PalindromeTriple();
+        System.out.println(euler4.toString()); //997799, 580085, 698896 is wrong //906609 correct
 
-        System.out.println(euler4.toString()); //997799, 580085, 698896 is wrong
 //        euler4.checkArr();
 
 //        int n = 948231;
@@ -23,5 +23,12 @@ public class Problem4 {
 //        for (int i = 997799; i < 998001; i++)
 //            System.out.println(i);
 
+//        for (int i = 5; i >= 1; i--) {
+//            for (int j = 5; j >= i; j--) {
+//                if (j == i)
+//                    System.out.println("(" + i + ", " + j + ")   \n");
+//                else System.out.print("(" + i + ", " + j + ")   ");
+//            }
+//        }
     }
 }
