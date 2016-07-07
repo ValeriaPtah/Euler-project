@@ -1,8 +1,6 @@
 package problem4;
 
 
-import java.util.Arrays;
-
 public class PalindromeTriple {
 
     private int[] segregated = new int[6];
@@ -21,11 +19,9 @@ public class PalindromeTriple {
         segregated[3] = n / 100 % 10;
         segregated[4] = n / 10 % 10;
         segregated[5] = n % 10;
-//        System.out.println(Arrays.toString(segregated));
 
         if ((segregated[0] == segregated[5]) && (segregated[1] == segregated[4]) && (segregated[2] == segregated[3]))
             check = true;
-//        System.out.print(check);
 
         return check;
     }
@@ -43,7 +39,6 @@ public class PalindromeTriple {
                 if ((product) > 100000) {
                     if (isPalindrome(product) && (product > palindrome)) {
                         palindrome = product;
-//                        System.out.println("Current: " + palindrome + ". i: " + i + ", j :" + (j));
                         firstMult = i;
                         secondMult = j;
                         break;
@@ -56,12 +51,6 @@ public class PalindromeTriple {
 
     }
 
-    public void checkArr() {
-        for (int i = 698896; i <= 997799; i++) {
-            if (isPalindrome(i))
-                System.out.println(i);
-        }
-    }
 
     @Override
     public String toString() {
