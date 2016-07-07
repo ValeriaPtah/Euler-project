@@ -36,14 +36,14 @@ public class PalindromeTriple {
         int palindrome = 0;
         int product = 0;
 
-        //the sequence is right
+        //the sequence is semi-right
         for (int i = 999; i >= 100; i--) {
             for (int j = 999; j >= i; j--) {
                 product = i * j;
                 if ((product) > 100000) {
-                    palindrome = product;
-                    if (isPalindrome(palindrome)) {
-                        System.out.println("Current: " + palindrome + ". i: " + i + ", j :" + (j));
+                    if (isPalindrome(product) && (product > palindrome)) {
+                        palindrome = product;
+//                        System.out.println("Current: " + palindrome + ". i: " + i + ", j :" + (j));
                         firstMult = i;
                         secondMult = j;
                         break;
@@ -51,7 +51,6 @@ public class PalindromeTriple {
                 }
             }
         }
-
 
         return palindrome;
 
