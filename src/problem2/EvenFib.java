@@ -8,8 +8,9 @@ public class EvenFib {
     private int fibPrev;
 
 
+    //optimised method
     public int fibSum (int n) {
-        int sum = 0;
+        int sum;
 
         this.fibPrev = 2;
         this.fibCur = 8;
@@ -18,13 +19,14 @@ public class EvenFib {
         sum = this.fibPrev + this.fibCur;
 
         while (fibNext <= n) {
-            sum+=fibNext;
+            sum += fibNext;
             //counting only every third fibonacci term
             fibNext = 4*fibCur + fibPrev;
             fibPrev = fibCur;
             fibCur = fibNext;
 
         }
+
             return sum;
     }
 
@@ -38,7 +40,7 @@ public class EvenFib {
 
         while (fibNext <= n) {
             if (fibNext%2 == 0) //calculating the sum
-                sum+=fibNext;
+                sum += fibNext;
             //usual Fibonacci iteration
             fibNext = fibPrev + fibCur;
             fibPrev = fibCur;

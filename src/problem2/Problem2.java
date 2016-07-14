@@ -7,11 +7,12 @@ package problem2;
 public class Problem2 {
 
     public static void main(String[] args) {
-        EvenFib euler2 = new EvenFib();
         int n = 4000000;
 
-        System.out.println(euler2.fibSum(n));
-        System.out.println(euler2.testSum(n));
+        EvenFib euler2 = new EvenFib();
+
+        System.out.println("Final: " + euler2.fibSum(n));
+        System.out.println("Check: " + euler2.testSum(n));
 
     }
 }

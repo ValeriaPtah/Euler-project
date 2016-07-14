@@ -7,11 +7,11 @@ package problem5;
 public class Problem5 {
 
     public static void main(String[] args) {
-
-        SmallestMultiple euler5 = new SmallestMultiple();
         int n = 20;
 
-        System.out.println(euler5.toString(n));
+        SmallestMultiple euler5 = new SmallestMultiple();
+
+        System.out.println("Check:" + euler5.toString(n));
 
 
     }

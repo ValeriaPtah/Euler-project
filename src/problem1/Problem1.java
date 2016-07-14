@@ -6,10 +6,14 @@ public class Problem1 {
 //	The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int mult1 = 3;
+		int mult2 = 5;
+		int limit = 1000;
+
 		Multiples euler1 = new Multiples();
-		System.out.println(euler1.multSum(3, 5, 1000));
-		System.out.println(euler1.testSum(3, 5, 1000));
+
+		System.out.println("Final: " + euler1.multSum(mult1, mult2, limit));
+		System.out.println("Check: " + euler1.testSum(mult1, mult2, limit));
 	}
 
 }

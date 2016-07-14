@@ -6,12 +6,12 @@ public class LargestPrimeFactor {
     //checks if a number is prime
     private boolean isPrime (long n) {
         boolean check = false;
+
         for (int i = 2; i <= n/2; i++) {
             if (n % i == 0) {
                 check = false;
                 break;
-            }
-            else check = true;
+            } else check = true;
         }
 
         return check;
@@ -21,15 +21,15 @@ public class LargestPrimeFactor {
     //searches the largest prime divider (factor)
     public long largestPrimeCheck (long n) {
         long nLoc = n;
-        long lastFactor = 0L;
-        double maxFactor = Math.sqrt(nLoc);
         long factor = 3L;
+        long lastFactor;
+        double maxFactor = Math.sqrt(nLoc);
 
-        if (nLoc%2 == 0) {
+        if (nLoc % 2 == 0) {
             lastFactor = 2L;
-            nLoc = nLoc/2;
-            while (nLoc%2 == 0)
-                nLoc = nLoc/2;
+            nLoc = nLoc / 2;
+            while (nLoc % 2 == 0)
+                nLoc = nLoc / 2;
 
         } else {
             lastFactor = 1;
@@ -37,10 +37,10 @@ public class LargestPrimeFactor {
 
         while ((nLoc > 1) && (factor <= maxFactor)) {
             if (n%factor == 0) {
-                nLoc = nLoc/factor;
+                nLoc = nLoc / factor;
                 lastFactor = factor;
-                while (nLoc%factor == 0)
-                    nLoc = nLoc/factor;
+                while (nLoc % factor == 0)
+                    nLoc = nLoc / factor;
             }
             factor += 2;
         }

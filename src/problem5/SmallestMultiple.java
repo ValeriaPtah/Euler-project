@@ -23,12 +23,12 @@ public class SmallestMultiple {
     private long smMult (int n) {
         long mult = 0L;
 
-        for (long i = 252L; i < 16761064320L; i++) {
+        //16 761 064 320 = 2 * 3 * 4 * ... * 18 * 19 * 20
+        for (long i = 252L; i < 16761064320L; i++)
             if (isDivByRange(i, n)) {
                 mult = i;
                 break;
             }
-        }
 
         return mult;
     }

@@ -9,6 +9,7 @@ public class PalindromeTriple {
     //the biggest product of two 3-digit numbers is 998 001 = 999 * 999
     //the smallest product of two 3-digit numbers is 100 000 = 100 * 100
 
+    //checks if N is palindrome
     private boolean isPalindrome (int n) {
         boolean check = false;
 
@@ -28,9 +29,9 @@ public class PalindromeTriple {
 
 
     //brute-force check
-    public int biggestPalindromeTripleTest() {
+    private int biggestPalindromeTripleTest() {
         int palindrome = 0;
-        int product = 0;
+        int product;
 
         //the sequence is semi-right
         for (int i = 999; i >= 100; i--) {
