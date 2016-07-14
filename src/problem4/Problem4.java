@@ -8,6 +8,6 @@ public class Problem4 {
 
         PalindromeTriple euler4 = new PalindromeTriple();
         System.out.println(euler4.toString()); //997799, 580085, 698896 is wrong //906609 correct
-        
+
     }
 }
