@@ -2,9 +2,10 @@
 # Local project configurations #
 ###################
 rebel.xml
-.idea/
+.classpath
 .project
 .settings/
+.idea/
 
 # Compiled source #
 ###################
