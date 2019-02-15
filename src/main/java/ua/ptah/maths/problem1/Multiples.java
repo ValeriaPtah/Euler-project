@@ -1,6 +1,5 @@
 package ua.ptah.maths.problem1;
 
-
 class Multiples {
 
   /**
