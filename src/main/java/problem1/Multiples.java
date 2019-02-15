@@ -3,33 +3,24 @@ package problem1;
 
 public class Multiples {
 
-	//finds a sum of all numbers in N divided by DIV
-	private int arSum (int n, int div) { //DIV is also a first member of a progression
-		int sum;
-		int amount = (n - 1) / div; //number of members
-		
-		sum = (2*div + div*(amount-1))*((amount/2)+(amount%2));
-		
-		return sum;
-	}
-	
-	public int multSum (int div1, int div2, int n) {
+  /**
+   * finds a sum of all numbers below the LIMIT divided by DIV
+   * DIV is also a first member of a progression
+   */
+  private static int sumOfArithmeticProgression(int div, int limit) {
+    int amountOfMembers = (limit - 1) / div;
+    int lastMember = div + (div * (amountOfMembers - 1));
 
-		int sum = arSum(n, div1) + arSum(n, div2) - arSum(n, div1 * div2);
-		//add two arithmetic progression with d = div1 and d = div2
-		//but extract sum of (div1 * div2) to avoid duplicates (15 for 3 and 5)
+    return amountOfMembers * (div + lastMember) / 2;
+  }
 
-		return sum;
-	}
+  /**
+   * add two arithmetic progression with d = div1 and d = div2
+   * but extract sum of (div1 * div2) to avoid duplicates (15 for 3 and 5)
+   */
+  public static int sumOfMultiples(int div1, int div2, int limit) {
 
-	//brute-force sum
-	public int testSum (int div1, int div2, int n) {
-		int sum = 0;
-
-		for (int i = 0; i < n; i++)
-			if ((i % div1 == 0) || (i % div2 == 0))
-				sum += i;
-
-		return sum;
-	}
+    return sumOfArithmeticProgression(div1, limit) + sumOfArithmeticProgression(div2, limit)
+        - sumOfArithmeticProgression(div1 * div2, limit);
+  }
 }
