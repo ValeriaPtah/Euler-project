@@ -1,6 +1,6 @@
-package problem1;
+package ua.ptah.maths.problem1;
 
-import static problem1.Multiples.sumOfMultiples;
+import static ua.ptah.maths.problem1.Multiples.sumOfMultiples;
 
 public class Problem1 {
 

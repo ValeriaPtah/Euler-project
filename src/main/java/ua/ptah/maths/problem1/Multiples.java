@@ -1,7 +1,7 @@
-package problem1;
+package ua.ptah.maths.problem1;
 
 
-public class Multiples {
+class Multiples {
 
   /**
    * finds a sum of all numbers below the LIMIT divided by DIV
@@ -18,7 +18,7 @@ public class Multiples {
    * add two arithmetic progression with d = div1 and d = div2
    * but extract sum of (div1 * div2) to avoid duplicates (15 for 3 and 5)
    */
-  public static int sumOfMultiples(int div1, int div2, int limit) {
+  static int sumOfMultiples(int div1, int div2, int limit) {
 
     return sumOfArithmeticProgression(div1, limit) + sumOfArithmeticProgression(div2, limit)
         - sumOfArithmeticProgression(div1 * div2, limit);
