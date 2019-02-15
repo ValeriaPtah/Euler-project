@@ -3,7 +3,6 @@ package ua.ptah.maths.problem1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ua.ptah.maths.problem1.Multiples.sumOfMultiples;
 
 class MultiplesTest {
 
@@ -19,7 +18,7 @@ class MultiplesTest {
       }
     }
 
-    assertEquals(testSum, sumOfMultiples(DIV1, DIV2, LIMIT));
+    assertEquals(testSum, Multiples.sumOfMultiples(DIV1, DIV2, LIMIT));
   }
 
 }
