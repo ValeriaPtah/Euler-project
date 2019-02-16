@@ -1,11 +1,11 @@
 package ua.ptah.maths.problem5;
 
-
 class SmallestMultiple {
 
-
-  //checks if NUM is divided without a reminder by all numbers is a range (0, DIV]
-  private boolean isDivByRange(long num, int div) {
+  /**
+   * checks if NUM is divided without a reminder by all numbers in a range (0, DIV]
+   */
+  private static boolean isDivByRange(long num, int div) {
     boolean check = true;
 
     for (int i = 2; i <= div; i++) {
@@ -18,9 +18,8 @@ class SmallestMultiple {
     return check;
   }
 
-
   //brute force check
-  private long smMult(int n) {
+  static long smallestMultiple(int n) {
     long mult = 0L;
 
     //16 761 064 320 = 2 * 3 * 4 * ... * 18 * 19 * 20
@@ -32,10 +31,5 @@ class SmallestMultiple {
     }
 
     return mult;
-  }
-
-
-  String toString(int n) {
-    return "The Smallest Multiple for " + n + " is: " + smMult(n);
   }
 }

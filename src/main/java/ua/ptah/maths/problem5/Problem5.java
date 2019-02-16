@@ -1,18 +1,18 @@
 package ua.ptah.maths.problem5;
 
-//2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-//What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+import static ua.ptah.maths.problem5.SmallestMultiple.smallestMultiple;
+
+/**
+ * 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+ * What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+ */
 
 
 public class Problem5 {
 
+  private static final int DIV_LIMIT = 20;
+
   public static void main(String[] args) {
-    int n = 20;
-
-    SmallestMultiple euler5 = new SmallestMultiple();
-
-    System.out.println("Check:" + euler5.toString(n));
-
-
+    System.out.println("The Smallest Multiple for " + DIV_LIMIT + " is: " + smallestMultiple(DIV_LIMIT));
   }
 }
