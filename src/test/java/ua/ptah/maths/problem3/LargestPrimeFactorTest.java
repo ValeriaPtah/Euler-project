@@ -9,6 +9,6 @@ class LargestPrimeFactorTest {
   @Test
   void testLargestPrime() {
     assertEquals(97L, LargestPrimeFactor.largestPrimeFactor(8051L));
-    assertEquals(103L, LargestPrimeFactor.largestPrimeFactor(10403L));
+    assertEquals(6857L, LargestPrimeFactor.largestPrimeFactor(600851475143L));
   }
 }
