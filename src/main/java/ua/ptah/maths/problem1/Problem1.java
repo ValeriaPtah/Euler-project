@@ -7,10 +7,8 @@ package ua.ptah.maths.problem1;
 
 public class Problem1 {
 
-  private static final int MULTIPLIER1 = 3, MULTIPLIER2 = 5, LIMIT = 1000;
-
   public static void main(String[] args) {
-    System.out.println("Final: " + Multiples.sumOfMultiples(MULTIPLIER1, MULTIPLIER2, LIMIT));
+    System.out.println("Final: " + Multiples.sumOfMultiplesUpTo(3, 5, 1000));
   }
 
 }

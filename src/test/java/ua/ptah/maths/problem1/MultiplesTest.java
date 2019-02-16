@@ -18,7 +18,8 @@ class MultiplesTest {
       }
     }
 
-    assertEquals(testSum, Multiples.sumOfMultiples(DIV1, DIV2, LIMIT));
+    assertEquals(testSum, Multiples.sumOfMultiplesUpTo(DIV1, DIV2, LIMIT));
   }
 
+  //assert just the known number and the initial method
 }

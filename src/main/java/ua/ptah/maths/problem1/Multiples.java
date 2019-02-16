@@ -3,23 +3,23 @@ package ua.ptah.maths.problem1;
 class Multiples {
 
   /**
-   * finds a sum of all numbers below the LIMIT divided by DIV
-   * DIV is also a first member of a progression
+   * finds a sum of all numbers below the LIMIT divided by MULTIPLIER
+   * MULTIPLIER is also a first member of a progression
    */
-  private static int sumOfArithmeticProgression(int div, int limit) {
-    int amountOfMembers = (limit - 1) / div;
-    int lastMember = div + (div * (amountOfMembers - 1));
+  private static int sumOfArithmeticProgression(int multiplier, int limit) {
+    int amountOfMembers = (limit - 1) / multiplier;
+    int lastMember = multiplier + (multiplier * (amountOfMembers - 1));
 
-    return amountOfMembers * (div + lastMember) / 2;
+    return amountOfMembers * (multiplier + lastMember) / 2;
   }
 
   /**
-   * add two arithmetic progression with d = div1 and d = div2
-   * but extract sum of (div1 * div2) to avoid duplicates (15 for 3 and 5)
+   * add two arithmetic progression with d = MULTIPLIER1 and d = MULTIPLIER2
+   * but extract sum of (MULTIPLIER1 * MULTIPLIER2) to avoid duplicates (15 for 3 and 5)
    */
-  static int sumOfMultiples(int div1, int div2, int limit) {
+  static int sumOfMultiplesUpTo(int multiplier1, int multiplier2, int limit) {
 
-    return sumOfArithmeticProgression(div1, limit) + sumOfArithmeticProgression(div2, limit)
-        - sumOfArithmeticProgression(div1 * div2, limit);
+    return sumOfArithmeticProgression(multiplier1, limit) + sumOfArithmeticProgression(multiplier2, limit)
+        - sumOfArithmeticProgression(multiplier1 * multiplier2, limit);
   }
 }
