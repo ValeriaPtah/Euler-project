@@ -6,20 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MultiplesTest {
 
-  private static final int DIV1 = 3, DIV2 = 5, LIMIT = 1000;
-
   @Test
-  void testBruteForceMultiples() {
-    int testSum = 0;
-
-    for (int i = 0; i < LIMIT; i++) {
-      if ((i % DIV1 == 0) || (i % DIV2 == 0)) {
-        testSum += i;
-      }
-    }
-
-    assertEquals(testSum, Multiples.sumOfMultiplesUpTo(DIV1, DIV2, LIMIT));
+  void testMultiples() {
+    assertEquals(233168, Multiples.sumOfMultiplesUpTo(3, 5, 1000));
   }
-
-  //assert just the known number and the initial method
 }

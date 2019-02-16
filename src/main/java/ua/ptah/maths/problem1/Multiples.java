@@ -2,7 +2,7 @@ package ua.ptah.maths.problem1;
 
 class Multiples {
 
-  /**
+  /*
    * finds a sum of all numbers below the LIMIT divided by MULTIPLIER
    * MULTIPLIER is also a first member of a progression
    */
@@ -13,7 +13,7 @@ class Multiples {
     return amountOfMembers * (multiplier + lastMember) / 2;
   }
 
-  /**
+  /*
    * add two arithmetic progression with d = MULTIPLIER1 and d = MULTIPLIER2
    * but extract sum of (MULTIPLIER1 * MULTIPLIER2) to avoid duplicates (15 for 3 and 5)
    */

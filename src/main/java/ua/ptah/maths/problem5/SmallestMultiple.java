@@ -2,7 +2,7 @@ package ua.ptah.maths.problem5;
 
 class SmallestMultiple {
 
-  /**
+  /*
    * checks if NUM is divided without a reminder by all numbers in a range (0, DIV]
    */
   private static boolean isDivByRange(long num, int div) {
