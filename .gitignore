@@ -1,6 +1,7 @@
 
 # Local project configurations #
 ###################
+*.iml
 rebel.xml
 .classpath
 .project
