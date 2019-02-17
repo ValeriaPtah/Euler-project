@@ -23,17 +23,6 @@ class SmallestMultiple {
 
   //checks if NUM is divided without a reminder by all numbers in a range (0, MAX_DIV]
   private static boolean isDivByRange(long num, long maxDiv) {
-//    return LongStream.iterate(2, i -> i++).limit(maxDiv).allMatch(i -> num % i == 0);
-
-    boolean check = true;
-
-    for (int i = 2; i <= maxDiv; i++) {
-      if (num % i != 0) {
-        check = false;
-        break;
-      }
-    }
-
-    return check;
+    return LongStream.rangeClosed(2, maxDiv).allMatch(i -> num % i == 0);
   }
 }
