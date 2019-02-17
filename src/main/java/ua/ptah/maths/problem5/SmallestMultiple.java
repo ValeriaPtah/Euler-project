@@ -10,9 +10,18 @@ import java.util.stream.LongStream;
 
 class SmallestMultiple {
 
-  /*
-   * checks if NUM is divided without a reminder by all numbers in a range (0, MAX_DIV]
-   */
+  //MOAR STREAMS!!
+  static long smallestMultiple(long divRangeLimit) {
+    long lowerLimit = LongStream.range(1, divRangeLimit + 1).sum();
+    long upperLimit = LongStream.range(1, divRangeLimit).reduce(1, (a, b) -> a * b);
+
+    return LongStream.rangeClosed(lowerLimit, upperLimit)
+        .filter(i -> isDivByRange(i, divRangeLimit))
+        .findFirst()
+        .orElseThrow(NoSuchElementException::new);
+  }
+
+  //checks if NUM is divided without a reminder by all numbers in a range (0, MAX_DIV]
   private static boolean isDivByRange(long num, long maxDiv) {
 //    return LongStream.iterate(2, i -> i++).limit(maxDiv).allMatch(i -> num % i == 0);
 
@@ -26,16 +35,5 @@ class SmallestMultiple {
     }
 
     return check;
-  }
-
-  //MOAR STREAMS!!
-  static long smallestMultiple(long divRangeLimit) {
-    long lowerLimit = LongStream.range(1, divRangeLimit + 1).sum();
-    long upperLimit = LongStream.range(1, divRangeLimit).reduce(1, (a, b) -> a * b);
-
-    return LongStream.rangeClosed(lowerLimit, upperLimit)
-        .filter(i -> isDivByRange(i, divRangeLimit))
-        .findFirst()
-        .orElseThrow(NoSuchElementException::new);
   }
 }
