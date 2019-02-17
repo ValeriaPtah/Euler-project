@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SmallestMultipleTest {
-  private static final int DIV_LIMIT = 20;
+  private static final long DIV_LIMIT = 22L;
 
   @Test
   void testSmallestMultiple() {

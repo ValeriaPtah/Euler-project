@@ -5,17 +5,20 @@ package ua.ptah.maths.problem5;
  * What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
  */
 
+import java.util.NoSuchElementException;
+import java.util.stream.LongStream;
+
 class SmallestMultiple {
 
   /*
    * checks if NUM is divided without a reminder by all numbers in a range (0, MAX_DIV]
    */
-  private static boolean isDivByRange(long num, int max_div) {
-//    return Stream.iterate(2, i -> i++).limit(max_div).allMatch(i -> num % i == 0);
+  private static boolean isDivByRange(long num, long maxDiv) {
+//    return LongStream.iterate(2, i -> i++).limit(maxDiv).allMatch(i -> num % i == 0);
 
     boolean check = true;
 
-    for (int i = 2; i <= max_div; i++) {
+    for (int i = 2; i <= maxDiv; i++) {
       if (num % i != 0) {
         check = false;
         break;
@@ -25,20 +28,14 @@ class SmallestMultiple {
     return check;
   }
 
-  static long smallestMultiple(int n) {
-    // return Stream.iterate(252L, i -> i++).limit(16761064320L).findFirst(i -> isDivByRange(i, n));
-    // think about the type carry on
+  //MOAR STREAMS!!
+  static long smallestMultiple(long divRangeLimit) {
+    long lowerLimit = LongStream.range(1, divRangeLimit + 1).sum();
+    long upperLimit = LongStream.range(1, divRangeLimit).reduce(1, (a, b) -> a * b);
 
-    long mult = 0L;
-
-    //16 761 064 320 = 2 * 3 * 4 * ... * 18 * 19 * 20
-    for (long i = 252L; i < 16761064320L; i++) {
-      if (isDivByRange(i, n)) {
-        mult = i;
-        break;
-      }
-    }
-
-    return mult;
+    return LongStream.rangeClosed(lowerLimit, upperLimit)
+        .filter(i -> isDivByRange(i, divRangeLimit))
+        .findFirst()
+        .orElseThrow(NoSuchElementException::new);
   }
 }
