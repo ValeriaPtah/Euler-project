@@ -12,10 +12,9 @@ class SmallestMultiple {
 
   //MOAR STREAMS!!
   static long smallestMultiple(long divRangeLimit) {
-    long lowerLimit = LongStream.range(1, divRangeLimit + 1).sum();
-    long upperLimit = LongStream.range(1, divRangeLimit).reduce(1, (a, b) -> a * b);
+    long upperLimit = LongStream.rangeClosed(1, divRangeLimit).reduce(1, (a, b) -> a * b);
 
-    return LongStream.rangeClosed(lowerLimit, upperLimit)
+    return LongStream.rangeClosed(1, upperLimit)
         .filter(i -> isDivByRange(i, divRangeLimit))
         .findFirst()
         .orElseThrow(NoSuchElementException::new);
