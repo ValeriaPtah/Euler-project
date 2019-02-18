@@ -8,6 +8,6 @@ class SumSquareDifferenceTest {
 
   @Test
   void sumSqDif() {
-    assertEquals(25164150, SumSquareDifference.sumSqDif(100));
+    assertEquals(25164150, SumSquareDifference.sumSqDif());
   }
 }

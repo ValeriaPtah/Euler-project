@@ -10,12 +10,13 @@ package ua.ptah.maths.problem6;
  */
 
 class SumSquareDifference {
-  static int sumSqDif(int natNumLimit) {
-//    int sumOfSq = IntStream.rangeClosed(1, natNumLimit).map(i -> i * i).sum();
-//    int sqOfSum = IntStream.rangeClosed(1, natNumLimit).sum();
-    int sumOfSq = natNumLimit * (natNumLimit * 2 + 1) * (natNumLimit + 1) / 6;
-    int sqOfSum = natNumLimit * (natNumLimit + 1) / 2;
-    System.out.println("smth");
+  private static final int NATURAL_NUMBERS_LIMIT = 100;
+
+  static int sumSqDif() {
+//    int sumOfSq = IntStream.rangeClosed(1, NATURAL_NUMBERS_LIMIT).map(i -> i * i).sum();
+//    int sqOfSum = IntStream.rangeClosed(1, NATURAL_NUMBERS_LIMIT).sum();
+    int sumOfSq = NATURAL_NUMBERS_LIMIT * (NATURAL_NUMBERS_LIMIT * 2 + 1) * (NATURAL_NUMBERS_LIMIT + 1) / 6;
+    int sqOfSum = NATURAL_NUMBERS_LIMIT * (NATURAL_NUMBERS_LIMIT + 1) / 2;
 
     return sqOfSum * sqOfSum - sumOfSq;
   }
