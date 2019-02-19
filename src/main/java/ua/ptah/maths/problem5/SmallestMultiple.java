@@ -10,17 +10,17 @@ import java.util.stream.LongStream;
 
 class SmallestMultiple {
 
-  static long smallestMultiple(long divRangeLimit) {
-    long upperLimit = LongStream.rangeClosed(1, divRangeLimit).reduce(1, (a, b) -> a * b);
+  static long smallestMultiple(long maxDivisor) {
+    long upperLimit = LongStream.rangeClosed(1, maxDivisor).reduce(1, (a, b) -> a * b);
 
     return LongStream.rangeClosed(1, upperLimit)
-        .filter(i -> isDivByRange(i, divRangeLimit))
+        .filter(i -> isDivByRange(i, maxDivisor))
         .findFirst()
         .orElseThrow(NoSuchElementException::new);
   }
 
   //checks if NUM is divided without a reminder by all numbers in a range (0, MAX_DIV]
-  private static boolean isDivByRange(long num, long maxDiv) {
-    return LongStream.rangeClosed(2, maxDiv).allMatch(i -> num % i == 0);
+  private static boolean isDivByRange(long num, long maxDivisor) {
+    return LongStream.rangeClosed(2, maxDivisor).allMatch(i -> num % i == 0);
   }
 }
