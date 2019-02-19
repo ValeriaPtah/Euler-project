@@ -10,15 +10,16 @@ package ua.ptah.maths.problem6;
  */
 
 class SumSquareDifference {
-  private static final int NATURAL_NUMBERS_LIMIT = 100;
 
-  static int sumSqDif() {
-//    int sumOfSq = IntStream.rangeClosed(1, NATURAL_NUMBERS_LIMIT).map(i -> i * i).sum();
-//    int sqOfSum = IntStream.rangeClosed(1, NATURAL_NUMBERS_LIMIT).sum();
-    int sumOfSq = NATURAL_NUMBERS_LIMIT * (NATURAL_NUMBERS_LIMIT * 2 + 1) * (NATURAL_NUMBERS_LIMIT + 1) / 6;
-    int sqOfSum = NATURAL_NUMBERS_LIMIT * (NATURAL_NUMBERS_LIMIT + 1) / 2;
+  /*
+   * To sum 1..n we use arithmetic progression sum formula: n(n + 1)/2
+   * To sum squares we use: n(2n + 1)(n + 1)/6
+   * Both formulas are derived taking into account that d = 1 (difference step)
+   */
+  static int sumSqDif(int natNumbersLimit) {
+    int sumOfSquares = natNumbersLimit * (natNumbersLimit * 2 + 1) * (natNumbersLimit + 1) / 6;
+    int sequenceSum = natNumbersLimit * (natNumbersLimit + 1) / 2;
 
-    return sqOfSum * sqOfSum - sumOfSq;
+    return sequenceSum * sequenceSum - sumOfSquares;
   }
-
 }

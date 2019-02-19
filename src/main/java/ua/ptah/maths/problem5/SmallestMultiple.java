@@ -10,7 +10,6 @@ import java.util.stream.LongStream;
 
 class SmallestMultiple {
 
-  //MOAR STREAMS!!
   static long smallestMultiple(long divRangeLimit) {
     long upperLimit = LongStream.rangeClosed(1, divRangeLimit).reduce(1, (a, b) -> a * b);
 
