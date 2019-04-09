@@ -7,9 +7,6 @@ package ua.ptah.maths.problem3;
 
 class LargestPrimeFactor {
 
-  /*
-   * searches for the largest prime divider (factor) of N
-   */
   static long largestPrimeFactor(long n) {
     long nLoc = n;
     long factor = 3L;

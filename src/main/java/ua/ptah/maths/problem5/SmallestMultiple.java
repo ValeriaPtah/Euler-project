@@ -19,7 +19,6 @@ class SmallestMultiple {
         .orElseThrow(NoSuchElementException::new);
   }
 
-  //checks if NUM is divided without a reminder by all numbers in a range (0, MAX_DIV]
   private static boolean isDivByRange(long num, long maxDivisor) {
     return LongStream.rangeClosed(2, maxDivisor).allMatch(i -> num % i == 0);
   }

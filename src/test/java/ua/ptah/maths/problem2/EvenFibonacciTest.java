@@ -3,13 +3,13 @@ package ua.ptah.maths.problem2;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ua.ptah.maths.problem2.EvenFib.evenFibonacciLimitSum;
+import static ua.ptah.maths.problem2.EvenFibonacci.sumEvenFibonacciBelowLimit;
 
-class EvenFibTest {
+class EvenFibonacciTest {
 
   @Test
   void testEvenFibonacciLimitSum() {
-    assertEquals(4613732, evenFibonacciLimitSum(4000000));
+    assertEquals(4613732, sumEvenFibonacciBelowLimit(4000000));
   }
 
 }

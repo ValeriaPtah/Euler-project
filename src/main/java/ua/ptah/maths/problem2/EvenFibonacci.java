@@ -6,12 +6,9 @@ package ua.ptah.maths.problem2;
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  */
 
-class EvenFib {
+class EvenFibonacci {
 
-  /*
-   * finds a sum of all even Fibonacci numbers below the LIMIT
-   */
-  static int evenFibonacciLimitSum(int limit) {
+  static int sumEvenFibonacciBelowLimit(int limit) {
 
     int fibPrev = 2;
     int fibCur = 8;

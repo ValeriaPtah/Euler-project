@@ -8,12 +8,10 @@ package ua.ptah.maths.problem4;
 
 class PalindromeFromThreeDigits {
 
-  //brute-force check
   int biggestPalindromeFromThreeDigits() {
     int palindrome = 0;
     int product;
 
-    //the sequence is semi-right
     for (int i = 999; i >= 100; i--) {
       for (int j = 999; j >= i; j--) {
         product = i * j;
