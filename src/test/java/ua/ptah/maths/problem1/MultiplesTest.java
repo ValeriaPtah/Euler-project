@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MultiplesTest {
 
   @Test
-  void testMultiples() {
+  void sumOfMultiplesUpToTest() {
     assertEquals(233168, Multiples.sumOfMultiplesUpTo(3, 5, 1000));
   }
 }

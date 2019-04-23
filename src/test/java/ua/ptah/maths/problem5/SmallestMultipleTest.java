@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SmallestMultipleTest {
 
   @Test
-  void testSmallestMultiple() {
+  void smallestMultipleTest() {
     assertEquals(232792560, SmallestMultiple.smallestMultiple(20L));
   }
 }

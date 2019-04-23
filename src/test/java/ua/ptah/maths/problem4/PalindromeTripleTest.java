@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class PalindromeTripleTest {
 
   @Test
-  void testbiggestPalindromeTriple() {
+  void biggestPalindromeFromThreeDigitsTest() {
     assertEquals(906609, new PalindromeFromThreeDigits().biggestPalindromeFromThreeDigits());
   }
 
