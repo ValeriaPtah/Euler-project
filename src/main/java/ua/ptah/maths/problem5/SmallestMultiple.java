@@ -10,16 +10,16 @@ import java.util.stream.LongStream;
 
 class SmallestMultiple {
 
-  static long smallestMultiple(long maxDivisor) {
-    long upperLimit = LongStream.rangeClosed(1, maxDivisor).reduce(1, (a, b) -> a * b);
+    static long smallestMultiple(long maxDivisor) {
+        long upperLimit = LongStream.rangeClosed(1, maxDivisor).reduce(1, (a, b) -> a * b);
 
-    return LongStream.rangeClosed(1, upperLimit)
-        .filter(i -> isDivByRange(i, maxDivisor))
-        .findFirst()
-        .orElseThrow(NoSuchElementException::new);
-  }
+        return LongStream.rangeClosed(1, upperLimit)
+                .filter(i -> isDivByRange(i, maxDivisor))
+                .findFirst()
+                .orElseThrow(NoSuchElementException::new);
+    }
 
-  private static boolean isDivByRange(long num, long maxDivisor) {
-    return LongStream.rangeClosed(2, maxDivisor).allMatch(i -> num % i == 0);
-  }
+    private static boolean isDivByRange(long num, long maxDivisor) {
+        return LongStream.rangeClosed(2, maxDivisor).allMatch(i -> num % i == 0);
+    }
 }

@@ -9,20 +9,20 @@ import ua.ptah.util.Prime;
 
 class PrimeCount {
 
-  static int nthPrime(int index) {
-    if (index == 1) {
-      return 2;
+    static int nthPrime(int index) {
+        if (index == 1) {
+            return 2;
+        }
+        int nthPrime = 1;
+        int currentIndex = 1;
+        while (currentIndex < index) {
+            nthPrime += 2;
+            if (Prime.isPrime(nthPrime)) {
+                currentIndex++;
+            }
+        }
+        return nthPrime;
     }
-    int nthPrime = 1;
-    int currentIndex = 1;
-    while (currentIndex < index) {
-      nthPrime += 2;
-      if (Prime.isPrime(nthPrime)) {
-        currentIndex++;
-      }
-    }
-    return nthPrime;
-  }
 
 }
 

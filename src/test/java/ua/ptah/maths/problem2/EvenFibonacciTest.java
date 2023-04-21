@@ -7,9 +7,9 @@ import static ua.ptah.maths.problem2.EvenFibonacci.sumEvenFibonacciBelowLimit;
 
 class EvenFibonacciTest {
 
-  @Test
-  void sumEvenFibonacciBelowLimitTest() {
-    assertEquals(4613732, sumEvenFibonacciBelowLimit(4000000));
-  }
+    @Test
+    void sumEvenFibonacciBelowLimitTest() {
+        assertEquals(4613732, sumEvenFibonacciBelowLimit(4000000));
+    }
 
 }

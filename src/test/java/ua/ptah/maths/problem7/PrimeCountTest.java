@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PrimeCountTest {
 
-  @Test
-  void nthPrimeTest() {
-    assertEquals(104743, PrimeCount.nthPrime(10001));
-  }
+    @Test
+    void nthPrimeTest() {
+        assertEquals(104743, PrimeCount.nthPrime(10001));
+    }
 }

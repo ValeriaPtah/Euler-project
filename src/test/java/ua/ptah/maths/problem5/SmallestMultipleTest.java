@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SmallestMultipleTest {
 
-  @Test
-  void smallestMultipleTest() {
-    assertEquals(232792560, SmallestMultiple.smallestMultiple(20L));
-  }
+    @Test
+    void smallestMultipleTest() {
+        assertEquals(232792560, SmallestMultiple.smallestMultiple(20L));
+    }
 }

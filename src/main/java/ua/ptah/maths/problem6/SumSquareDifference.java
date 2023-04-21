@@ -11,15 +11,15 @@ package ua.ptah.maths.problem6;
 
 class SumSquareDifference {
 
-  /*
-   * To sum 1..n we use arithmetic progression sum formula: n(n + 1)/2
-   * To sum squares we use: n(2n + 1)(n + 1)/6
-   * Both formulas are derived taking into account that d = 1 (difference step)
-   */
-  static int sumSqDif(int natNumbersLimit) {
-    int sumOfSquares = natNumbersLimit * (natNumbersLimit * 2 + 1) * (natNumbersLimit + 1) / 6;
-    int sequenceSum = natNumbersLimit * (natNumbersLimit + 1) / 2;
+    /*
+     * To sum 1..n we use arithmetic progression sum formula: n(n + 1)/2
+     * To sum squares we use: n(2n + 1)(n + 1)/6
+     * Both formulas are derived taking into account that d = 1 (difference step)
+     */
+    static int sumSqDif(int natNumbersLimit) {
+        int sumOfSquares = natNumbersLimit * (natNumbersLimit * 2 + 1) * (natNumbersLimit + 1) / 6;
+        int sequenceSum = natNumbersLimit * (natNumbersLimit + 1) / 2;
 
-    return sequenceSum * sequenceSum - sumOfSquares;
-  }
+        return sequenceSum * sequenceSum - sumOfSquares;
+    }
 }

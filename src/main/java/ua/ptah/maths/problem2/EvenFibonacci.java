@@ -8,21 +8,21 @@ package ua.ptah.maths.problem2;
 
 class EvenFibonacci {
 
-  static int sumEvenFibonacciBelowLimit(int limit) {
+    static int sumEvenFibonacciBelowLimit(int limit) {
 
-    int fibPrev = 2;
-    int fibCur = 8;
-    int fibNext = 0;
+        int fibPrev = 2;
+        int fibCur = 8;
+        int fibNext = 0;
 
-    int sum = fibPrev + fibCur;
+        int sum = fibPrev + fibCur;
 
-    while (fibNext <= limit) {
-      sum += fibNext;
-      fibNext = 4 * fibCur + fibPrev;
-      fibPrev = fibCur;
-      fibCur = fibNext;
+        while (fibNext <= limit) {
+            sum += fibNext;
+            fibNext = 4 * fibCur + fibPrev;
+            fibPrev = fibCur;
+            fibCur = fibNext;
+        }
+
+        return sum;
     }
-
-    return sum;
-  }
 }

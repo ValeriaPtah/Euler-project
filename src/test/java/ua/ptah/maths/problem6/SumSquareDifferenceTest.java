@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SumSquareDifferenceTest {
 
-  @Test
-  void sumSqDifTest() {
-    assertEquals(25164150, SumSquareDifference.sumSqDif(100));
-  }
+    @Test
+    void sumSqDifTest() {
+        assertEquals(25164150, SumSquareDifference.sumSqDif(100));
+    }
 }
